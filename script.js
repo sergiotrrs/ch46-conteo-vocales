@@ -23,10 +23,15 @@ function leerValorDeNombre(){
  return inputNombre.value;
 }
 
+function imprimirResultado( resultado ){
+  const paragraph = document.getElementById("vocales");
+  paragraph.innerHTML = resultado;
+}
+
 function manejoDelEventoDeInputNombre(){
   const nombre = leerValorDeNombre().toLowerCase();
   const numLetraA = encontrarNumeroDeLetra("a", nombre );
-  console.log("Núm letras A: " + numLetraA );
+  imprimirResultado("Núm letras A: " + numLetraA );
 }
 
 
